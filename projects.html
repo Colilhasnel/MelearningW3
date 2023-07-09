@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        My Projects
+    </title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .project {
+            background-color: purple;
+            color: white;
+            margin: 15px;
+            padding: 15px;
+            border: solid;
+            border-width: 5px;
+            border-radius: 15px;
+            border-color: red;
+        }
+
+        .project:hover {
+            background-color: blue;
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id= "para" style="color: white;">Projects shown</h2>
+    <button id="showbutton" onclick="myFunction()">Hide Projects</button>
+    <div class="project" onclick="document.location='liana.html'">
+        <h2>Liana Robot</h2>
+        <p>
+            Line Follower Robot for mindbend
+        </p>
+    </div>
+    <div class="project" onclick="document.location='algovisual.html'">
+        <h2>Algorithm Visualizer</h2>
+        <p>Visualizes Sorting algorithms, made in pygame</p>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementsByClassName("project");
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.display="none";
+            }
+            document.getElementById("para").innerHTML = "Projects Hidden";
+            document.getElementById("showbutton").innerText = "Show Projects";
+        }
+    </script>
+</body>
+
+</html>
